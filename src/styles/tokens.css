@@ -1,0 +1,23 @@
+:root{
+    /* Warm dark (option 4) */
+    --bg:        #1c1917;
+    --paper:     #24201c;
+    --paper-2:   #2c2722;
+    --ink:       #ede1c8;
+    --ink-soft:  #c9b896;
+    --muted:     #8a7a60;
+    --rule:      #38312a;
+    --accent:    #d97757;     /* burnt orange */
+    --accent-soft: #e8a07d;
+
+    --serif:    "Instrument Serif", "Times New Roman", serif;
+    --sans:     "Geist", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --mono:     "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+    --pad-x: clamp(20px, 5vw, 64px);
+    --row-gap: 132px;
+    --col: 1180px;
+  }
+
+  html[data-density="tight"]  { --row-gap: 80px; }
+  html[data-density="comfy"]  { --row-gap: 180px; }
