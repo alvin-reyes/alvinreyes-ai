@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Vercel
+.vercel/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Design handoff — kept on disk for reference, not shipped
+design_handoff_alvinreyes_ai/
+design my personal website alvinreyes.ai.zip
