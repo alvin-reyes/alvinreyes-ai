@@ -23,3 +23,6 @@ dist/
 # Design handoff — kept on disk for reference, not shipped
 design_handoff_alvinreyes_ai/
 design my personal website alvinreyes.ai.zip
+
+# Scaffold artifact — remove after cleaning up
+ecliptic-escape/
