@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Alvin Reyes — Production AI & Agentic Workflows | AR Data',
+  description = "Alvin Reyes — 20-year practitioner shipping production AI and agentic systems. Founder of AR Data Intelligence Solutions. We don't prototype and disappear. We ship.",
+  canonical = 'https://alvinreyes.ai/',
+  ogImage = 'https://alvinreyes.ai/og-image.png',
+} = Astro.props;
+
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Alvin Reyes',
+  jobTitle: 'Founder & Principal Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'AR Data Intelligence Solutions',
+    parentOrganization: { '@type': 'Organization', name: 'ARCE Holdings Inc.' },
+  },
+  url: 'https://alvinreyes.ai/',
+  sameAs: [
+    'https://twitter.com/alvinjayreyes',
+    'https://github.com/alvin-reyes',
+    'https://linkedin.com/in/alvinpreyes',
+  ],
+};
+
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'AR Data Intelligence Solutions',
+  url: 'https://ardata.tech',
+  parentOrganization: { '@type': 'Organization', name: 'ARCE Holdings Inc.' },
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@alvinjayreyes" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+  </head>
+  <body>
+    <slot />
+    <Analytics />
+  </body>
+</html>
