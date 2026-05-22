@@ -1,0 +1,60 @@
+---
+// no props
+---
+<header class="topbar">
+  <div class="mark">
+    <span class="ar-mark" aria-hidden="true"></span>
+    <span>ALVIN&nbsp;REYES &nbsp;/&nbsp; AR&nbsp;DATA</span>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#holdings">Holdings</a>
+    <a href="#arc">Arc</a>
+    <a href="#workflow">Approach</a>
+    <a href="#principles">Principles</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Book a call</a>
+  </nav>
+  <div class="now"><span class="pulse" aria-hidden="true"></span><span><b>TAKING ENGAGEMENTS</b> &nbsp;/&nbsp; Q3 2026</span></div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px var(--pad-x);
+    background: color-mix(in oklch, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .topbar .mark { display: flex; align-items: center; gap: 12px; }
+  .ar-mark {
+    width: 22px; height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+  .ar-mark::after {
+    content: "AR";
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono);
+    font-size: 8px; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--bg);
+  }
+  .topbar nav { display: flex; gap: 22px; }
+  .topbar nav a { text-decoration: none; color: var(--muted); }
+  .topbar nav a:hover { color: var(--ink); }
+  .topbar .now { color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .topbar .now b { color: var(--ink); font-weight: 500; }
+  .topbar .now .pulse {
+    width: 7px; height: 7px; border-radius: 50%; background: #7fc99d;
+    box-shadow: 0 0 0 3px color-mix(in oklch, #7fc99d 22%, transparent);
+  }
+</style>

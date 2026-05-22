@@ -1,0 +1,45 @@
+---
+// no props
+---
+<footer>
+  <div class="ar-foot">
+    <span class="ar-mark" aria-hidden="true" style="width:18px;height:18px;"></span>
+    <span>&copy; 2026 AR DATA &middot; ALVIN REYES</span>
+  </div>
+  <div class="colo">
+    <span>BOOTSTRAPPED &middot; NO VC</span>
+    <span>ALVINREYES.AI &middot; v2026.05</span>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 40px var(--pad-x) 36px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .colo { display: flex; gap: 18px; }
+  footer .ar-foot { display: flex; align-items: center; gap: 10px; }
+  .ar-mark {
+    width: 22px; height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+  .ar-mark::after {
+    content: "AR";
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono);
+    font-size: 8px; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--bg);
+  }
+</style>
