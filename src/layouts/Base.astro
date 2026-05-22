@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 
+const SITE_URL = 'https://alvinreyes.ai/';
+const SITE_NAME = 'Alvin Reyes | AR Data';
+const AR_DATA_URL = 'https://ardata.tech';
+
 interface Props {
   title?: string;
   description?: string;
@@ -12,23 +16,23 @@ interface Props {
 const {
   title = 'Alvin Reyes — Production AI & Agentic Workflows | AR Data',
   description = "Alvin Reyes — 20-year practitioner shipping production AI and agentic systems. Founder of AR Data Intelligence Solutions. We don't prototype and disappear. We ship.",
-  canonical = 'https://alvinreyes.ai/',
-  ogImage = 'https://alvinreyes.ai/og-image.png',
+  canonical = SITE_URL,
+  ogImage = `${SITE_URL}og-image.png`,
 } = Astro.props;
+
+const orgId = `${AR_DATA_URL}/#organization`;
+const personId = `${SITE_URL}#person`;
 
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': personId,
   name: 'Alvin Reyes',
   jobTitle: 'Founder & Principal Engineer',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'AR Data Intelligence Solutions',
-    parentOrganization: { '@type': 'Organization', name: 'ARCE Holdings Inc.' },
-  },
-  url: 'https://alvinreyes.ai/',
+  worksFor: { '@id': orgId },
+  url: SITE_URL,
   sameAs: [
-    'https://twitter.com/alvinjayreyes',
+    'https://x.com/alvinjayreyes',
     'https://github.com/alvin-reyes',
     'https://linkedin.com/in/alvinpreyes',
   ],
@@ -37,8 +41,9 @@ const personLd = {
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': orgId,
   name: 'AR Data Intelligence Solutions',
-  url: 'https://ardata.tech',
+  url: AR_DATA_URL,
   parentOrganization: { '@type': 'Organization', name: 'ARCE Holdings Inc.' },
 };
 ---
@@ -55,6 +60,7 @@ const orgLd = {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
