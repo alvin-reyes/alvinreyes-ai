@@ -1,0 +1,214 @@
+---
+---
+
+<section id="holdings">
+  <p class="eyebrow"><span class="num">02</span> Holdings &mdash; The Group <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span>AR Data is one of several operating companies under <em>ARCE Holdings Inc.</em> One principal. One standard. One bench that ships.</h2>
+
+  <p class="holdings-intro">
+    Engagements run through the company that owns the domain &mdash; agentic
+    systems through AR Data, vertical intelligence through Caiden, computer
+    vision through SelfVision &mdash; <em>but the engineering standard is the same
+    across all of them.</em> Selective joint ventures sit alongside when the right
+    shape is a co-owned vehicle rather than a service engagement.
+  </p>
+
+  <div class="org" aria-label="ARCE Holdings group structure">
+    <div class="parent">
+      <span class="crown">PARENT &middot; 100%</span>
+      <div class="nm">ARCE Holdings Inc.</div>
+      <div class="desc">Bootstrapped &middot; Privately held &middot; Founded by Alvin Reyes</div>
+    </div>
+
+    <div class="trunk" aria-hidden="true"></div>
+
+    <div class="branches">
+
+      <div class="branch">
+        <span class="tick">SUB &middot; 01 &middot; OPERATING</span>
+        <div class="nm">AR Data Intelligence Solutions
+          <small>ardata.tech</small>
+        </div>
+        <div class="focus">Production AI &amp; agentic systems. Where the consulting work lives. WATED &amp; BMAD applied.</div>
+        <div class="stat">STATUS &middot; <b>Accepting engagements</b></div>
+      </div>
+
+      <div class="branch">
+        <span class="tick">SUB &middot; 02 &middot; OPERATING</span>
+        <div class="nm">Caiden Intelligence Solutions
+          <small>caiden.ai</small>
+        </div>
+        <div class="focus">Applied intelligence for vertical workflows. Domain models, embedded agents, and the analytics that make them measurable.</div>
+        <div class="stat">STATUS &middot; <b>Active</b></div>
+      </div>
+
+      <div class="branch">
+        <span class="tick">SUB &middot; 03 &middot; OPERATING</span>
+        <div class="nm">SelfVision Inc.
+          <small>selfvision.ai</small>
+        </div>
+        <div class="focus">Computer vision &amp; identity. Models, pipelines, and the rollback story that keeps them shippable in regulated contexts.</div>
+        <div class="stat">STATUS &middot; <b>Active</b></div>
+      </div>
+
+      <div class="branch">
+        <span class="tick">SUB &middot; 04 &middot; OPERATING</span>
+        <div class="nm">Koneksi Inc.
+          <small>koneksi.* &middot; [confirm domain]</small>
+        </div>
+        <div class="focus">[Placeholder &mdash; tell me Koneksi&rsquo;s scope.] Likely connectivity, integration, or platform layer powering the other operating companies.</div>
+        <div class="stat">STATUS &middot; <b>Active</b></div>
+      </div>
+
+      <div class="branch">
+        <span class="tick">SUB &middot; 05 &middot; OPERATING</span>
+        <div class="nm">MetaDev Inc.
+          <small>metadev.* &middot; [confirm domain]</small>
+        </div>
+        <div class="focus">[Placeholder &mdash; tell me MetaDev&rsquo;s scope.] Likely a developer-tools or platform engineering venture supporting the group&rsquo;s build pipeline.</div>
+        <div class="stat">STATUS &middot; <b>Active</b></div>
+      </div>
+
+      <div class="branch jv">
+        <span class="tick">JV &middot; 06+ &middot; PARTNER-LED</span>
+        <div class="nm">Joint Ventures
+          <small>by partner</small>
+        </div>
+        <div class="focus">Selective JVs with domain partners where the right shape is a co-owned vehicle rather than a service engagement.</div>
+        <div class="stat">STATUS &middot; <b>Selective</b></div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="ann-note">&#8627; One principal, one standard &mdash; engagements book into the operating company that owns the domain.</p>
+</section>
+
+<style>
+  .holdings-intro {
+    font-size: clamp(16px, 1.25vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 78ch;
+    margin: 0 0 48px;
+    text-wrap: pretty;
+  }
+  .holdings-intro strong { color: var(--ink); font-weight: 500; }
+  .holdings-intro em { color: var(--accent); font-style: italic; }
+
+  .org { display: flex; flex-direction: column; align-items: center; }
+
+  .org .parent {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 24px 36px;
+    text-align: center;
+    min-width: 340px;
+    position: relative;
+  }
+  .org .parent .crown {
+    position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: var(--bg);
+    font-family: var(--mono);
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 999px;
+  }
+  .org .parent .nm {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.0;
+    letter-spacing: -0.015em;
+    margin: 10px 0 6px;
+  }
+  .org .parent .desc {
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .org .trunk {
+    width: 1px; height: 32px;
+    background: var(--rule);
+    margin: 0;
+  }
+
+  .org .branches {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 980px) { .org .branches { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .org .branches { grid-template-columns: 1fr; } }
+
+  .org .branch {
+    background: var(--paper);
+    padding: 24px 22px;
+    display: flex; flex-direction: column; gap: 10px;
+    min-height: 200px;
+    transition: background .2s ease;
+  }
+  .org .branch:hover { background: var(--paper-2); }
+
+  .org .branch .tick {
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .org .branch.jv .tick { color: var(--muted); }
+
+  .org .branch .nm {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .org .branch .nm small {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .org .branch .focus {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .org .branch .stat {
+    margin-top: auto;
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+  .org .branch .stat b { color: var(--ink); font-weight: 500; }
+
+  .org .branch.jv {
+    background:
+      repeating-linear-gradient(45deg,
+        transparent 0 6px,
+        color-mix(in oklch, var(--paper) 60%, var(--rule)) 6px 7px),
+      var(--paper);
+  }
+
+  .ann-note {
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+</style>
