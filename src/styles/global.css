@@ -51,6 +51,14 @@
   }
   .lede em{ color:var(--accent); font-style:italic; }
 
+  /* ── Body copy utility ────────────────────────────── */
+  .body-copy{
+    font-size: clamp(16px, 1.25vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
   /* ── Button utility ────────────────────────────────── */
   .btn{
     display:inline-flex; align-items:center; gap:10px;
