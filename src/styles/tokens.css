@@ -9,6 +9,7 @@
     --rule:      #38312a;
     --accent:    #d97757;     /* burnt orange */
     --accent-soft: #e8a07d;
+    --accent-available: #7fc99d; /* available-for-work green */
 
     --serif:    "Instrument Serif", "Times New Roman", serif;
     --sans:     "Geist", -apple-system, "Helvetica Neue", Arial, sans-serif;

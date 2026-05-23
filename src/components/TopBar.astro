@@ -32,29 +32,13 @@
     letter-spacing: 0.02em;
   }
   .topbar .mark { display: flex; align-items: center; gap: 12px; }
-  .ar-mark {
-    width: 22px; height: 22px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-  }
-  .ar-mark::after {
-    content: "AR";
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--mono);
-    font-size: 8px; font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--bg);
-  }
   .topbar nav { display: flex; gap: 22px; }
   .topbar nav a { text-decoration: none; color: var(--muted); }
   .topbar nav a:hover { color: var(--ink); }
   .topbar .now { color: var(--muted); display: flex; align-items: center; gap: 10px; }
   .topbar .now b { color: var(--ink); font-weight: 500; }
   .topbar .now .pulse {
-    width: 7px; height: 7px; border-radius: 50%; background: #7fc99d;
-    box-shadow: 0 0 0 3px color-mix(in oklch, #7fc99d 22%, transparent);
+    width: 7px; height: 7px; border-radius: 50%; background: var(--accent-available);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent-available) 22%, transparent);
   }
 </style>
