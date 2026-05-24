@@ -1,0 +1,110 @@
+---
+---
+
+<section class="arc" id="arc">
+  <p class="eyebrow"><span class="num">03</span> The Arc &mdash; Two Decades of Shipping <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span>Twenty years across enterprise, finance, and decentralized infra. Every line on this list was a system that had to <em>survive in production.</em></h2>
+
+  <ul>
+    <li>
+      <span class="yr">2024&ndash;</span>
+      <span class="co">AR Data <span class="pin">●</span></span>
+      <span class="role">Founder &amp; principal engineer. Production AI &amp; blockchain systems for teams who need them to actually work.</span>
+      <span class="city">Bootstrapped</span>
+    </li>
+    <li>
+      <span class="yr">2021&ndash;24</span>
+      <span class="co">Protocol Labs</span>
+      <span class="role">Contributed to IPFS and Filecoin infrastructure &mdash; the decentralized storage layer powering Web3.</span>
+      <span class="city">Remote / Global</span>
+    </li>
+    <li>
+      <span class="yr">2018&ndash;21</span>
+      <span class="co">Scotiabank</span>
+      <span class="role">Engineering for systems that cannot fail. Trading and core platforms with hard reliability bars.</span>
+      <span class="city">Toronto</span>
+    </li>
+    <li>
+      <span class="yr">2015&ndash;18</span>
+      <span class="co">Macquarie Bank</span>
+      <span class="role">Capital-markets platforms. Where I learned what financial institutions really demand.</span>
+      <span class="city">Sydney / NYC</span>
+    </li>
+    <li>
+      <span class="yr">2010&ndash;15</span>
+      <span class="co">HP / DXC</span>
+      <span class="role">Led large-scale infrastructure engagements across multiple continents. Delivery at enterprise scale.</span>
+      <span class="city">Multi-region</span>
+    </li>
+    <li>
+      <span class="yr">2007&ndash;10</span>
+      <span class="co">IBM</span>
+      <span class="role">Middleware, integration, and what it really takes to ship inside a Fortune-100 stack.</span>
+      <span class="city">APAC</span>
+    </li>
+    <li>
+      <span class="yr">2004&ndash;07</span>
+      <span class="co">Oracle</span>
+      <span class="role">Database &amp; enterprise delivery. The school of &ldquo;the SOW is not the system.&rdquo;</span>
+      <span class="city">APAC</span>
+    </li>
+  </ul>
+  <p class="arc-note">
+    &#8627; Dates &amp; locations approximate &mdash; tell me which to refine.
+  </p>
+</section>
+
+<style>
+  .arc ul {
+    list-style: none; padding: 0; margin: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .arc li {
+    display: grid;
+    grid-template-columns: 110px 1fr 1.4fr 90px;
+    gap: 28px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+    transition: background .2s ease;
+    cursor: default;
+  }
+  .arc li:hover { background: color-mix(in oklch, var(--paper) 60%, transparent); }
+  @media (max-width: 820px) {
+    .arc li { grid-template-columns: 70px 1fr; }
+    .arc li .role, .arc li .city { grid-column: 2; }
+  }
+  .arc .yr {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .arc .co {
+    font-family: var(--serif);
+    font-size: clamp(26px, 2.8vw, 38px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .arc .role {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .arc .city {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-align: right;
+  }
+  @media (max-width: 820px) { .arc .city { text-align: left; } }
+  .arc .pin { color: var(--accent); }
+  .arc-note {
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+</style>
