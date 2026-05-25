@@ -1,0 +1,117 @@
+---
+---
+
+<section id="wated">
+  <p class="eyebrow"><span class="num">04 / 02</span> My Approach — WATED, Five Pillars <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span><strong>Layer 2 of 3 &middot; The Design Framework.</strong> Every agentic system AR Data builds is designed across <em>five pillars.</em> Skip one and the system works in demo, then dies in production.</h2>
+
+  <p class="holdings-intro body-copy">
+    We name them WATED so the conversation with your team is the same
+    conversation every time. Each pillar has its own choices, its own
+    failure modes, and its own rollback story. We make all five explicit
+    before we write a line of code &mdash; and we revisit them every time the
+    system grows.
+  </p>
+
+  <div class="wated-grid" aria-label="WATED — Workflow, Agent, Tools, Events, Data Storage">
+    <div class="pillar">
+      <span class="idx">/ 01</span>
+      <div class="letter">W</div>
+      <div class="word">Workflow</div>
+      <div class="desc">The <strong>business process</strong> being transformed &mdash; mapped end-to-end, with explicit hand-offs, decision points, and the human roles that already live in it. We change the workflow first; the agents come second.</div>
+    </div>
+    <div class="pillar">
+      <span class="idx">/ 02</span>
+      <div class="letter">A</div>
+      <div class="word">Agent</div>
+      <div class="desc"><strong>Specialist agents</strong> with bounded scope, defined prompts, and clear stop conditions. Small enough to test in isolation, narrow enough to replace. No mystery monoliths.</div>
+    </div>
+    <div class="pillar">
+      <span class="idx">/ 03</span>
+      <div class="letter">T</div>
+      <div class="word">Tools</div>
+      <div class="desc"><strong>Typed tool surfaces</strong> the agents can call &mdash; read-only by default, writes behind allow-lists. Every tool has a contract, a test, and a rollback path.</div>
+    </div>
+    <div class="pillar">
+      <span class="idx">/ 04</span>
+      <div class="letter">E</div>
+      <div class="word">Events</div>
+      <div class="desc"><strong>Triggers &amp; signals</strong> &mdash; webhooks, queues, schedules, on-chain events. Async by default, idempotent on retry, observable on every hop. Agents react to events; they don&rsquo;t live in a chat box.</div>
+    </div>
+    <div class="pillar">
+      <span class="idx">/ 05</span>
+      <div class="letter">D</div>
+      <div class="word">Data Storage</div>
+      <div class="desc"><strong>Where state lives</strong> &mdash; vector for retrieval, relational for truth, KV for cache, on-chain for trust. Right store for the right durability and read pattern. Schemas owned, not generated.</div>
+    </div>
+  </div>
+
+  <p class="ann-note">&#8627; WATED is AR Data&rsquo;s own framework &mdash; proven across finance, enterprise, and Web3 engagements.</p>
+</section>
+
+<style>
+  .holdings-intro {
+    max-width: 78ch;
+    margin: 0 0 48px;
+  }
+
+  .wated-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 980px) { .wated-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .wated-grid { grid-template-columns: 1fr; } }
+
+  .wated-grid .pillar {
+    background: var(--paper);
+    padding: 28px 22px;
+    display: flex; flex-direction: column; gap: 14px;
+    min-height: 280px;
+    position: relative;
+    transition: background .2s ease;
+  }
+  .wated-grid .pillar:hover { background: var(--paper-2); }
+
+  .wated-grid .pillar .idx {
+    position: absolute; top: 14px; right: 16px;
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .wated-grid .pillar .letter {
+    font-family: var(--serif);
+    font-size: clamp(72px, 8vw, 104px);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+  }
+  .wated-grid .pillar .word {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 500;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+  .wated-grid .pillar .desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .wated-grid .pillar .desc strong { color: var(--ink); font-weight: 500; }
+
+  .ann-note {
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+</style>

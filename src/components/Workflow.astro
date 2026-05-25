@@ -1,0 +1,149 @@
+---
+---
+
+<section class="workflow" id="workflow">
+  <p class="eyebrow"><span class="num">04</span> My Approach — The Loop <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span>My approach has three frames. The <em>loop</em> below is the meta-shape every engagement runs through. <em>WATED</em> is the five-pillar design framework. <em>BMAD</em> is the build crew that ships the system.</h2>
+  <h2 class="lede"><span class="marker"></span>A repeatable shape I bring to every engagement &mdash; <em>plan, ground, execute, verify, ship.</em> The boxes change. The loop doesn&rsquo;t.</h2>
+
+  <div class="diagram" aria-label="Agentic workflow diagram">
+
+    <div class="node intent">
+      <div class="lbl"><span>00 &middot; INPUT</span><span>human</span></div>
+      <div class="name">Intent &amp; constraints</div>
+      <div class="detail">What the business actually wants, what it can&rsquo;t tolerate, and the success criteria the system will be judged against. Written down. Signed off. Not assumed.</div>
+    </div>
+
+    <div class="arrow-row">↓ &nbsp; decompose</div>
+
+    <div class="node plan">
+      <div class="lbl"><span>01 &middot; PLAN</span><span>planner agent</span></div>
+      <div class="name">Task graph</div>
+      <div class="detail">Decomposes intent into a graph of bounded sub-tasks with explicit hand-offs and stop conditions.</div>
+    </div>
+    <div class="node context">
+      <div class="lbl"><span>02 &middot; GROUND</span><span>retrieval</span></div>
+      <div class="name">Context layer</div>
+      <div class="detail">Pulls the right code, docs, data, and prior decisions. Caches what&rsquo;s expensive; invalidates what&rsquo;s stale.</div>
+    </div>
+    <div class="node guard">
+      <div class="lbl"><span>03 &middot; GUARD</span><span>policy</span></div>
+      <div class="name">Guardrails &amp; rollback</div>
+      <div class="detail">Allow-lists, budget caps, write-scopes, and the human gates that keep the system in its lane. <em>If you can&rsquo;t roll back, you can&rsquo;t ship.</em></div>
+    </div>
+
+    <div class="arrow-row">↓ &nbsp; execute</div>
+
+    <div class="node exec accent">
+      <div class="lbl"><span>04 &middot; EXECUTE</span><span>worker agents</span></div>
+      <div class="name">Specialist agents calling typed tools</div>
+      <div class="detail">Small, single-purpose agents with narrow tool surfaces. Each one is independently testable, observable, and replaceable. No mystery monoliths.</div>
+    </div>
+
+    <div class="node tool1">
+      <div class="lbl"><span>tool</span><span>read</span></div>
+      <div class="name">Code &amp; docs</div>
+    </div>
+    <div class="node tool2">
+      <div class="lbl"><span>tool</span><span>read</span></div>
+      <div class="name">Data &amp; metrics</div>
+    </div>
+    <div class="node tool3">
+      <div class="lbl"><span>tool</span><span>write</span></div>
+      <div class="name">On-chain / off-chain</div>
+    </div>
+    <div class="node tool4">
+      <div class="lbl"><span>tool</span><span>write</span></div>
+      <div class="name">PRs, tickets, comms</div>
+    </div>
+
+    <div class="arrow-row">↓ &nbsp; check</div>
+
+    <div class="node verify">
+      <div class="lbl"><span>05 &middot; VERIFY</span><span>critic + evals</span></div>
+      <div class="name">Critic loop &amp; evaluations</div>
+      <div class="detail">Independent critic agents, deterministic tests, and a small set of golden evals. Failure routes back to plan; success routes to ship. Every run is traced.</div>
+    </div>
+    <div class="node ship">
+      <div class="lbl"><span>06 &middot; SHIP</span><span>human</span></div>
+      <div class="name">Hand-off, observe, stand behind</div>
+      <div class="detail">Outputs land where work already lives. We deploy, observe, and stand behind it. Not prototype-and-disappear.</div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .diagram {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .node {
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 18px 18px;
+    border-radius: 4px;
+    position: relative;
+  }
+  .node .lbl {
+    color: var(--muted);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex; justify-content: space-between;
+  }
+  .node .name {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+  .node .detail {
+    color: var(--ink-soft);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .node.accent {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+  .node.accent .lbl { color: color-mix(in oklch, var(--bg) 55%, var(--accent)); }
+  .node.accent .name { color: var(--bg); }
+  .node.accent .detail { color: color-mix(in oklch, var(--bg) 78%, var(--accent)); }
+
+  .node.intent  { grid-column: 1 / span 12; }
+  .node.plan    { grid-column: 1 / span 4; }
+  .node.context { grid-column: 5 / span 4; }
+  .node.guard   { grid-column: 9 / span 4; }
+  .node.exec    { grid-column: 1 / span 12; }
+  .node.tool1   { grid-column: 1 / span 3; }
+  .node.tool2   { grid-column: 4 / span 3; }
+  .node.tool3   { grid-column: 7 / span 3; }
+  .node.tool4   { grid-column: 10 / span 3; }
+  .node.verify  { grid-column: 1 / span 7; }
+  .node.ship    { grid-column: 8 / span 5; }
+
+  @media (max-width: 820px) {
+    .diagram { grid-template-columns: 1fr; }
+    .node { grid-column: 1 !important; }
+  }
+
+  .arrow-row {
+    grid-column: 1 / -1;
+    height: 22px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+  .arrow-row::before, .arrow-row::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule);
+    margin: 0 14px;
+  }
+</style>

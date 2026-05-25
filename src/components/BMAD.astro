@@ -1,0 +1,133 @@
+---
+---
+
+<section id="bmad">
+  <p class="eyebrow"><span class="num">04 / 03</span> My Approach — BMAD, The Agent Crew <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span><strong>Layer 3 of 3 &middot; The Build Crew.</strong> WATED defines <em>what</em> we build. BMAD defines <em>how</em> we build it &mdash; a structured crew of specialist agents from analyst&rsquo;s brief to QA sign-off.</h2>
+
+  <div class="bmad-intro">
+    <p>
+      <strong>BMAD</strong> &mdash; the Breakthrough Method for Agile AI-Driven Development &mdash;
+      is a public open-source method (BMad-Method) for AI-assisted software
+      delivery. AR Data adopts it as-is and runs it <em>inside the WATED frame,</em>
+      so the deliverables map cleanly to the five pillars.
+    </p>
+    <p class="note">
+      Each hand-off is a typed artifact &mdash; replayable, reviewable, and reversible.
+      Stories sized for a single agent to land. QA approves or routes back; nothing
+      ships without a rollback.
+    </p>
+  </div>
+
+  <div class="crew" aria-label="BMAD agent crew">
+    <div class="agent">
+      <span class="ix">01 &middot; DISCOVERY</span>
+      <div class="name">Analyst</div>
+      <div class="role">Researches the domain, the users, and the prior art. Writes the project brief.</div>
+      <div class="out">OUT: <b>Project brief</b></div>
+    </div>
+    <div class="agent">
+      <span class="ix">02 &middot; INTENT</span>
+      <div class="name">PM</div>
+      <div class="role">Turns the brief into a PRD with epics, success criteria, and explicit non-goals.</div>
+      <div class="out">OUT: <b>PRD</b></div>
+    </div>
+    <div class="agent">
+      <span class="ix">03 &middot; DESIGN</span>
+      <div class="name">Architect</div>
+      <div class="role">System design across the WATED pillars. Trade-offs documented; rollback paths named.</div>
+      <div class="out">OUT: <b>Architecture doc</b></div>
+    </div>
+    <div class="agent">
+      <span class="ix">04 &middot; PLAN</span>
+      <div class="name">Scrum Master</div>
+      <div class="role">Drafts shippable stories from the PRD &amp; architecture. Sized for a single agent to land.</div>
+      <div class="out">OUT: <b>Stories</b></div>
+    </div>
+    <div class="agent">
+      <span class="ix">05 &middot; BUILD</span>
+      <div class="name">Dev</div>
+      <div class="role">Implements each story end-to-end &mdash; code, migrations, tests, observability hooks.</div>
+      <div class="out">OUT: <b>Pull requests</b></div>
+    </div>
+    <div class="agent">
+      <span class="ix">06 &middot; VERIFY</span>
+      <div class="name">QA</div>
+      <div class="role">Runs the golden evals, security checks, and rollback drills. Approves or routes back.</div>
+      <div class="out">OUT: <b>Sign-off</b></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bmad-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+    font-size: 14px; line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 760px) { .bmad-intro { grid-template-columns: 1fr; } }
+  .bmad-intro strong { color: var(--ink); font-weight: 500; }
+  .bmad-intro em { color: var(--accent); font-style: italic; }
+  .bmad-intro .note {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    padding: 14px 16px;
+    border: 1px dashed var(--rule);
+    border-radius: 4px;
+    background: color-mix(in oklch, var(--paper) 50%, transparent);
+  }
+
+  .crew {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 980px) { .crew { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 540px) { .crew { grid-template-columns: 1fr; } }
+
+  .crew .agent {
+    background: var(--paper);
+    padding: 22px 18px;
+    display: flex; flex-direction: column; gap: 10px;
+    min-height: 220px;
+    position: relative;
+    transition: background .2s ease;
+  }
+  .crew .agent:hover { background: var(--paper-2); }
+
+  .crew .agent .ix {
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .crew .agent .name {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 30px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .crew .agent .role {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .crew .agent .out {
+    margin-top: auto;
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+  }
+  .crew .agent .out b { color: var(--ink); font-weight: 500; }
+</style>
