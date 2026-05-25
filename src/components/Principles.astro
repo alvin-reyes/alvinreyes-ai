@@ -1,0 +1,80 @@
+---
+---
+
+<section id="principles">
+  <p class="eyebrow"><span class="num">05</span> Principles <span class="line"></span></p>
+  <h2 class="lede"><span class="marker"></span>Four things I believe after two decades of shipping. They aren&rsquo;t slogans &mdash; they&rsquo;re <em>how AR Data picks engagements.</em></h2>
+
+  <div class="principles">
+    <div class="principle">
+      <div class="num">/ 01</div>
+      <blockquote>Production is the <em>only</em> thing that counts.</blockquote>
+      <div class="gloss">A demo is a hypothesis. A deployed system that survives a Monday morning is a result. We measure ourselves against the second.</div>
+    </div>
+    <div class="principle">
+      <div class="num">/ 02</div>
+      <blockquote>If you can&rsquo;t <em>roll back</em>, you can&rsquo;t ship.</blockquote>
+      <div class="gloss">Every system we deploy has a reverse gear. Migrations are reversible, agents have kill-switches, decisions are traceable. Forward velocity without rollback is a bug, not a feature.</div>
+    </div>
+    <div class="principle">
+      <div class="num">/ 03</div>
+      <blockquote>AI tooling moves fast. <em>Maintenance</em> doesn&rsquo;t.</blockquote>
+      <div class="gloss">Generated code is cheap; the system it ships into still has to be operable on a Tuesday in three years. We pair AI speed with the engineering judgment that makes it durable.</div>
+    </div>
+    <div class="principle">
+      <div class="num">/ 04</div>
+      <blockquote>No bench. No <em>prototype-and-disappear.</em></blockquote>
+      <div class="gloss">Bootstrapped means we only take work we can actually deliver. The team that wins your engagement is the team that builds it &mdash; and stands behind it after.</div>
+    </div>
+    <div class="principle wide">
+      <div class="num">/ 05 &middot; FOUNDATIONAL</div>
+      <blockquote>Agentic workflow. <em>Human drives the outcome.</em> AI supports.</blockquote>
+      <div class="gloss">An agent is a tool, not a decision-maker. The human owns the goal, the success criteria, the trade-offs, and the sign-off. Agents accelerate the work between those decisions &mdash; they do not replace them. Every system we ship makes that boundary explicit: who decides, who executes, who reviews. Get this wrong and you don&rsquo;t have an agentic workflow; you have an unattended liability.</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 820px) { .principles { grid-template-columns: 1fr; } }
+
+  .principles .principle.wide { grid-column: 1 / -1; min-height: 220px; }
+  .principles .principle.wide blockquote { max-width: 880px; }
+
+  .principle {
+    background: var(--paper);
+    padding: 40px 32px;
+    display: flex; flex-direction: column; gap: 18px;
+    min-height: 280px;
+  }
+  .principle .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+  }
+  .principle blockquote {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .principle blockquote em { color: var(--accent); font-style: italic; }
+  .principle .gloss {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-top: auto;
+  }
+</style>
