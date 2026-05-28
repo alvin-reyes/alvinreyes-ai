@@ -121,5 +121,5 @@
   /* ── Reduce motion ─────────────────────────────────── */
   @media (prefers-reduced-motion: reduce){
     .reveal{ animation:none !important; opacity:1; transform:none; }
-    .hero .signature{ animation:none; }
+    .hero .signature{ animation:none !important; }
   }
